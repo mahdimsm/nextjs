@@ -15,18 +15,18 @@ export interface IProduct {
   }
 const ProductItem = ({ image, title, price }: IProduct) => {
     return (
-        <div>
-          <div className="shadow border p-8 flex flex-col justify-between min-h-60">
+        
+          <div className="sm:relative sm:h-72 sm:w-64 overflow-hidden w-full flex justify-between sm:flex-col ">
             <div>
-            <Image className="mx-auto" src={image} alt="site-logo"  width={70} height={70}/> 
+            <Image className="mx-auto" src={image} alt="product"  width={70} height={70}/> 
             </div>
             
-            <div className="flex justify-between p-2">
-              <p className="font-bold line-clamp-1 pl-5">{title} </p>
-              <p className="font-bold">{price}$</p>
+            <div dir="ltr" className=" sm:absolute sm:bottom-0  sm:left-0 flex flex-col justify-between p-5  sm:h-1/2">
+              <p  dir="ltr" className="font-bold">{title} </p>
+              <p  dir="ltr" className=" mt-2">{price}$</p>
             </div>
           </div>
-        </div>
+        
       );
 }
  
