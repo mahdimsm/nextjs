@@ -24,11 +24,11 @@ const  SingleProduct  = ({
   return (
     <div>
     <Container className="mt-5">
-    <div className='flex flex-col gap-y-10'>
+    {product &&(<div className='flex flex-col gap-y-10'>
           <div className=' relative h-60 w-full overflow-hidden rounded-b-md shadow-lg md:h-96'>
             <Image
-              src={product?.image}
-              alt={product?.title}
+              src={product.image}
+              alt={product.title}
               fill
               sizes='100vw'
               className='object-contain'
@@ -37,10 +37,10 @@ const  SingleProduct  = ({
             />
           </div>
           <div dir="ltr" className='space-y-4'>
-            <h1 className='text-3xl font-bold'>{product?.title}</h1>
-            <p className='text-justify text-lg'>{product?.description}</p>
+            <h1 className='text-3xl font-bold'>{product.title}</h1>
+            <p className='text-justify text-lg'>{product.description}</p>
           </div>
-        </div>
+        </div>)}
     </Container>
     </div>
 
